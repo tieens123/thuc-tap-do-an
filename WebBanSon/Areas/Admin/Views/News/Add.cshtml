@@ -1,6 +1,6 @@
 ﻿@model WebBanSon.Models.EF.News
 @{
-    ViewBag.Title = "Thêm mới Danh mục";
+    ViewBag.Title = "Thêm mới tin tức";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -64,7 +64,7 @@
                         <label for="exampleInputFile">Ảnh đại diện</label>
                         <div class="input-group">
                             <div class="custom-file">
-                                @Html.TextBoxFor(x=>x.Image,new {@id="txtImage",@class="form-control" })
+                                @Html.TextBoxFor(x => x.Image, new { @id = "txtImage", @class = "form-control" })
                             </div>
                             <div class="input-group-append">
                                 <input type="button" value="Tải ảnh" onclick="BrowseServer('txtImage');" />
@@ -77,7 +77,11 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Chi tiết </label>
-                        @Html.TextBoxFor(x => x.Detail, new { @class = "form-control", @id="txtDetail" })
+                        @Html.TextBoxFor(x => x.Detail, new { @class = "form-control", @id = "txtDetail" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Hiển thị</label>
+                        @Html.CheckBoxFor(x => x.IsActive, new {@checked= "@checked" })
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">SeoTitle</label>
@@ -93,8 +97,8 @@
                     </div>
 
                     <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Lưu</button>
                         <a href="/admin/news" class="btn btn-danger">Quay lại</a>
-                        <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
 

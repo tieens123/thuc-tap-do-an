@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace WebBanSon.Models.EF
 {
@@ -16,9 +17,13 @@ namespace WebBanSon.Models.EF
         [Required]
         [StringLength(250)]
         public String Title { get; set; }
+        [StringLength(250)]
         public String Alias { get; set; }
+        [StringLength(50)]
         public String Description { get; set; }
+        [AllowHtml]
         public String Detail { get; set; }
+        [StringLength(250)]
         public String Image { get; set; }
         public decimal Price { get; set; }
         public decimal PriceSale { get; set; }
@@ -27,9 +32,13 @@ namespace WebBanSon.Models.EF
         public bool IsSale { get; set; }
         public bool IsFeature { get; set; }
         public bool IsHot { get; set; }
+        public bool IsActive { get; set; }
         public int ProductCategoryId { get; set; }
+        [StringLength(250)]
         public string SeoTitle { get; set; }
+        [StringLength(50)]
         public string SeoDescription { get; set; }
+        [StringLength(250)]
         public string SeoKeywords { get; set; }
 
         public virtual ProductCategory ProductCategory { get; set; }

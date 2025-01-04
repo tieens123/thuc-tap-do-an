@@ -26,6 +26,7 @@ namespace WebBanSon.Models.EF
         [StringLength(150)]
         public String SeoDescription { get; set; }
         public String SeoKeywords { get; set; }
+        public bool IsActive { get; set; }
         public int Position { get; set; }
 
         public ICollection<News> News { get; set; }

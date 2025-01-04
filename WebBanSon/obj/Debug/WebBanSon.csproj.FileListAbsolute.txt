@@ -113,3 +113,5 @@ F:\1\TTDA\TTDA\WebBanSon\WebBanSon\obj\Debug\WebBanSon.Migrations.UpdateData.res
 F:\1\TTDA\TTDA\WebBanSon\WebBanSon\obj\Debug\WebBanSon.Migrations.upDTB.resources
 F:\1\TTDA\TTDA\WebBanSon\WebBanSon\bin\CKFinder.dll
 F:\1\TTDA\TTDA\WebBanSon\WebBanSon\bin\CKFinder.pdb
+F:\1\TTDA\TTDA\WebBanSon\WebBanSon\obj\Debug\WebBanSon.Migrations.UpdateActive.resources
+F:\1\TTDA\TTDA\WebBanSon\WebBanSon\obj\Debug\WebBanSon.Migrations.ChangeModels.resources

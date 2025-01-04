@@ -176,6 +176,7 @@
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -197,6 +198,14 @@
     <Compile Include="Migrations\202412271652406_upDTB.cs" />
     <Compile Include="Migrations\202412271652406_upDTB.designer.cs">
       <DependentUpon>202412271652406_upDTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202412301450371_UpdateActive.cs" />
+    <Compile Include="Migrations\202412301450371_UpdateActive.designer.cs">
+      <DependentUpon>202412301450371_UpdateActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202501031521106_ChangeModels.cs" />
+    <Compile Include="Migrations\202501031521106_ChangeModels.designer.cs">
+      <DependentUpon>202501031521106_ChangeModels.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -3130,6 +3139,10 @@
     <Content Include="Content\ckeditor\samples\sample_posteddata.php" />
     <Content Include="Content\ckeditor\skins\moono\readme.md" />
     <Content Include="Content\ckfinder\plugins\fileeditor\codemirror\LICENSE" />
+    <Content Include="Areas\Admin\Views\News\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Posts\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Posts\Add.cshtml" />
+    <Content Include="Areas\Admin\Views\Posts\Edit.cshtml" />
     <None Include="Scripts\jquery-3.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -3220,6 +3233,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202412271652406_upDTB.resx">
       <DependentUpon>202412271652406_upDTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202412301450371_UpdateActive.resx">
+      <DependentUpon>202412301450371_UpdateActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202501031521106_ChangeModels.resx">
+      <DependentUpon>202501031521106_ChangeModels.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,6 +1,6 @@
-﻿@model IEnumerable<WebBanSon.Models.EF.News>    
+﻿@model IEnumerable<WebBanSon.Models.EF.Posts>
 @{
-    ViewBag.Title = "Danh mục tin tức";
+    ViewBag.Title = "Bài viết";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <div class="row mb-2">
             <div class="col-sm-6">
-                <h1>Quản lý danh mục</h1>
+                <h1>Quản lý @ViewBag.Title</h1>
             </div>
             <div class="col-sm-6">
                 <ol class="breadcrumb float-sm-right">
@@ -42,7 +42,7 @@
             <h3 class="card-title">Danh sách @ViewBag.Title</h3>
 
             <div class="card-tools">
-                <a href="/admin/news/add" class="btn btn-primary">Thêm mới</a>
+                <a href="/admin/posts/add" class="btn btn-primary">Thêm mới</a>
                 <a href="#" class="btn btn-danger" id="BtnDeleteAll">Xóa</a>
             </div>
         </div>
@@ -51,7 +51,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th><input type="checkbox" id="SelectAll"/></th>
+                        <th><input type="checkbox" id="SelectAll" /></th>
                         <th>STT</th>
                         <th>Hình ảnh</th>
                         <th>Tiêu đề</th>
@@ -135,7 +135,7 @@
                     var conf = confirm('Bạn có muốn xóa các bản ghi này không?');
                     if (conf ===true) {
                         $.ajax({
-                            url: '/admin/news/deleteAll',
+                            url: '/admin/posts/deleteAll',
                             type: 'POST',
                             data: { ids: str },
                             success: function (rs) {
@@ -164,7 +164,7 @@
                 var conf = confirm('bạn có muốn xóa không');
                 if (conf === true) {
                     $.ajax({
-                        url: '/admin/news/delete',
+                        url: '/admin/posts/delete',
                         type: 'POST',
                         data: { id: id },
                         success: function (rs) {
@@ -180,7 +180,7 @@
                 var btn = $(this);
                 var id = btn.data("id");
                     $.ajax({
-                        url: '/admin/news/IsActive',
+                        url: '/admin/posts/IsActive',
                         type: 'POST',
                         data: { id: id },
                         success: function (rs) {
